@@ -20,7 +20,14 @@
 # ```
 
 def q1(names, heights):
-    # Escreva seu código aqui
+def q1(names, heights):
+    x = dict(zip(heights, names))
+    sortednames = []
+    sortedheights = sorted(heights, reverse=True)
+    for i in sortedheights:
+        sortednames.append(x[i])
+
+    return sortednames
     pass
 
 
