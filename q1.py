@@ -20,13 +20,17 @@
 # ```
 
 def q1(names, heights):
-x = dict(zip(heights, names))
-sortednames = []
-sortedheights = sorted(heights, reverse=True)
-for i in sortedheights:
-    sortednames.append(x[i])
+    dicionario = {}
+    y = []
+    for i in range(0,len(names)):
+        dicionario[heights[i]] = names[i]
 
-return sortednames
+    heights2 = sorted(heights)
+    heights2 = list(reversed(heights2))
+
+    for i in heights2:
+        y.append(dicionario[i])
+    return y
 
 
 if __name__ == '__main__':
