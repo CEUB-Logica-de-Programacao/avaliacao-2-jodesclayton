@@ -25,19 +25,21 @@
 
 
 def q2(n):
-    # Escreva seu código aqui
-    n1 = 0
-    n2 = 1
-    contador = 0
-    lista = {'n':0}
-    while contador < n:
-        x = n1 + n2
-        n1 = n2 
-        n2 = x
-        contador += 1
-        lista.update({'n': x})
-    for v in lista.values():
-        return v
+    R = [1, 2, 3]
+    n = int(input('Quantos degraus '))
+    n -= 3
+    x = 1
+    n1=1
+    n2=2
+    while x <= n:
+        Rn = R[n1] + R[n2]
+        R.append(Rn)
+        x += 1
+        n1 += 1
+        n2 += 1
+    R.sort(reverse=True)
+    return R[0]
+    pass
 
 
 if __name__ == '__main__':
